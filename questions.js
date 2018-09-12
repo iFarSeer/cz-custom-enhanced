@@ -111,6 +111,9 @@ module.exports = {
         message: function (answers) {
           return entry[answers.type].body ? entry[answers.type].body.message : message.body
         },
+        validate: function(value) {
+          return !!value;
+        },
         when: function (answers) {
           return entry[answers.type].body
         }
@@ -120,6 +123,9 @@ module.exports = {
         name: 'breaking',
         message: function (answers) {
           return entry[answers.type].breaking ? entry[answers.type].breaking.message : message.breaking
+        },
+        validate: function(value) {
+          return !!value;
         },
         when: function(answers) {
           if (config.allowBreakingChanges && config.allowBreakingChanges.indexOf(answers.type.toLowerCase()) >= 0) {
@@ -133,6 +139,9 @@ module.exports = {
         name: 'footer',
         message: function (answers) {
           return entry[answers.type].footer ? entry[answers.type].footer.message : message.footer
+        },
+        validate: function(value) {
+          return !!value;
         },
         when: function (answers) {
           return isNotWip && entry[answers.type].footer;

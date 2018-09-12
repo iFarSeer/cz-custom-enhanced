@@ -9,9 +9,7 @@
 // - 最后一句描述代码影响范围（可选）
 
 // #### 新增功能的代码提交
-// - Add:新增了什么模块，简述这个模块是做什么用的。
-// - Delete: 删除了什么模块，简述为什么删除。
-// - Change: 修改了什么模块，简述为什么修改。
+// - add:新增了什么模块，简述这个模块是做什么用的。
 
 // #### 重构功能的代码提交
 // - 重构功能的代码提交
@@ -23,68 +21,158 @@
 
 module.exports = {
   entry: {
-    Add: {
-      value: 'Add',
-      name: 'Add:    新增模块功能',
-      subject: {
-        prefix: '模块: ',
-        message: '新增了什么模块'
-      },
-      body: {
-        prefix: '作用: ',
-        message: '简述这个模块是做什么用的'
-      }
-    },
-    Fix: {
-      value: 'Fix',
-      name: 'Fix:    修复Bug',
+    add: {
+      value: 'add',
+      name: 'add:            新增内容',
       scope: {
         custom: true,
-        message: '描述解决了什么问题，如果有Bug号的时候，带上Bug号'
+        prefix: ': ',
+        message: '任务单号'
       },
       subject: {
-        prefix: '原因: ',
-        message: '描述引入这个问题的原因'
+        prefix: ' ',
+        message: '简述新增内容'
+      },
+      footer: {
+        prefix: '影响范围: ',
+        message: '描述代码影响范围'
+      }
+    },
+    update: {
+      value: 'update',
+      name: 'update:         修改内容',
+      scope: {
+        custom: true,
+        prefix: ': ',
+        message: '任务单号'
+      },
+      subject: {
+        prefix: ' ',
+        message: '简述修改内容'
+      },
+      footer: {
+        prefix: '影响范围: ',
+        message: '描述代码影响范围'
+      }
+    },
+    fix: {
+      value: 'fix',
+      name: 'fix:            修复问题',
+      scope: {
+        custom: true,
+        prefix: ': ',
+        message: '任务单号'
+      },
+      subject: {
+        prefix: ' ',
+        message: '简述Bug'
       },
       body: {
+        prefix: '原因: ',
+        message: '简述问题原因'
+      },
+      breaking: {
         prefix: '方案: ',
         message: '简述解决方案'
       },
       footer: {
         prefix: '影响范围: ',
-        message: '描述代码影响范围（可选）'
+        message: '描述代码影响范围'
       }
     },
-    Change: {
-      value: 'Change',
-      name: 'Change:    修改模块功能',
+    merge: {
+      value: 'merge',
+      name: 'merge:          合并分支',
       subject: {
-        prefix: '模块: ',
-        message: '修改了什么模块'
+        prefix: ' ',
+        message: '简述合并内容'
+      },
+      footer: {
+        prefix: '影响范围: ',
+        message: '描述代码影响范围'
+      }
+    },
+    refactor: {
+      value: 'refactor',
+      name: 'refactor:       重构内容',
+      scope: {
+        custom: true,
+        prefix: ': ',
+        message: '任务单号'
+      },
+      subject: {
+        prefix: ' ',
+        message: '简述重构内容'
       },
       body: {
         prefix: '原因: ',
-        message: '简述为什么修改'
+        message: '简述重构原因'
+      },
+      footer: {
+        prefix: '影响范围: ',
+        message: '描述代码影响范围'
       }
     },
-    Refactor: {
-      value: 'Refactor',
-      name: 'Refactor:    重构模块功能',
+    docs: {
+      value: 'docs',
+      name: 'docs:           添加文档',
+      scope: {
+        custom: true,
+        prefix: ': ',
+        message: '任务单号'
+      },
       subject: {
-        prefix: '模块: ',
-        message: '重构了什么代码模块'
+        prefix: ' ',
+        message: '简述文档内容'
+      }
+    },
+    style: {
+      value: 'style',
+      name: 'style:          代码格式',
+      subject: {
+        prefix: ' ',
+        message: '简述代码格式内容'
+      }
+    },
+    pref: {
+      value: 'pref',
+      name: 'pref:           优化内容',
+      scope: {
+        custom: true,
+        prefix: ': ',
+        message: '任务单号'
+      },
+      subject: {
+        prefix: ' ',
+        message: '简述优化内容'
       },
       body: {
         prefix: '原因: ',
-        message: '简述为什么重构'
+        message: '简述优化原因'
+      },
+      breaking: {
+        prefix: '方案: ',
+        message: '简述优化方案'
+      },
+      footer: {
+        prefix: '影响范围: ',
+        message: '描述代码影响范围'
       }
     },
-    Test: {
-      value: 'Test',
-      name: 'Test:    添加测试用例',
+    revert: {
+      value: 'revert',
+      name: 'revert:         回退内容',
       subject: {
-        prefix: '用例: ',
-        message: '简述增加某个模块的测试用例'
+        prefix: ' ',
+        message: '简述回退内容'
+      },
+      body: {
+        prefix: '原因: ',
+        message: '简述回退原因'
+      },
+      footer: {
+        prefix: '影响范围: ',
+        message: '描述代码影响范围'
       }
     }
   },
@@ -99,7 +187,6 @@ module.exports = {
   /*
   scopeOverrides: {
     fix: [
-
       {name: 'merge'},
       {name: 'style'},
       {name: 'e2eTest'},
