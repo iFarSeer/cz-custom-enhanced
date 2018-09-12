@@ -27,15 +27,15 @@ module.exports = {
       scope: {
         custom: true,
         prefix: ': ',
-        message: '任务单号'
+        message: '任务单号: '
       },
       subject: {
         prefix: ' ',
-        message: '简述新增内容'
+        message: '新增内容: '
       },
       footer: {
         prefix: '影响范围: ',
-        message: '描述代码影响范围'
+        message: '影响范围: '
       }
     },
     update: {
@@ -44,15 +44,15 @@ module.exports = {
       scope: {
         custom: true,
         prefix: ': ',
-        message: '任务单号'
+        message: '任务单号: '
       },
       subject: {
         prefix: ' ',
-        message: '简述修改内容'
+        message: '修改内容: '
       },
       footer: {
         prefix: '影响范围: ',
-        message: '描述代码影响范围'
+        message: '影响范围: '
       }
     },
     fix: {
@@ -61,23 +61,23 @@ module.exports = {
       scope: {
         custom: true,
         prefix: ': ',
-        message: '任务单号'
+        message: '任务单号: '
       },
       subject: {
         prefix: ' ',
-        message: '简述Bug'
+        message: '简述问题: '
       },
       body: {
         prefix: '原因: ',
-        message: '简述问题原因'
+        message: '问题原因: '
       },
       breaking: {
         prefix: '方案: ',
-        message: '简述解决方案'
+        message: '解决方案: '
       },
       footer: {
         prefix: '影响范围: ',
-        message: '描述代码影响范围'
+        message: '影响范围: '
       }
     },
     merge: {
@@ -85,11 +85,11 @@ module.exports = {
       name: 'merge:          合并分支',
       subject: {
         prefix: ' ',
-        message: '简述合并内容'
+        message: '合并内容: '
       },
       footer: {
         prefix: '影响范围: ',
-        message: '描述代码影响范围'
+        message: '影响范围: '
       }
     },
     refactor: {
@@ -98,19 +98,19 @@ module.exports = {
       scope: {
         custom: true,
         prefix: ': ',
-        message: '任务单号'
+        message: '任务单号: '
       },
       subject: {
         prefix: ' ',
-        message: '简述重构内容'
+        message: '重构内容: '
       },
       body: {
         prefix: '原因: ',
-        message: '简述重构原因'
+        message: '重构原因: '
       },
       footer: {
         prefix: '影响范围: ',
-        message: '描述代码影响范围'
+        message: '影响范围: '
       }
     },
     docs: {
@@ -119,11 +119,11 @@ module.exports = {
       scope: {
         custom: true,
         prefix: ': ',
-        message: '任务单号'
+        message: '任务单号: '
       },
       subject: {
         prefix: ' ',
-        message: '简述文档内容'
+        message: '文档内容: '
       }
     },
     style: {
@@ -131,7 +131,7 @@ module.exports = {
       name: 'style:          代码格式',
       subject: {
         prefix: ' ',
-        message: '简述代码格式内容'
+        message: '代码内容: '
       }
     },
     pref: {
@@ -140,23 +140,23 @@ module.exports = {
       scope: {
         custom: true,
         prefix: ': ',
-        message: '任务单号'
+        message: '任务单号: '
       },
       subject: {
         prefix: ' ',
-        message: '简述优化内容'
+        message: '优化内容: '
       },
       body: {
         prefix: '原因: ',
-        message: '简述优化原因'
+        message: '优化原因: '
       },
       breaking: {
         prefix: '方案: ',
-        message: '简述优化方案'
+        message: '优化方案: '
       },
       footer: {
         prefix: '影响范围: ',
-        message: '描述代码影响范围'
+        message: '影响范围: '
       }
     },
     revert: {
@@ -164,15 +164,15 @@ module.exports = {
       name: 'revert:         回退内容',
       subject: {
         prefix: ' ',
-        message: '简述回退内容'
+        message: '回退内容: '
       },
       body: {
         prefix: '原因: ',
-        message: '简述回退原因'
+        message: '回退原因: '
       },
       footer: {
         prefix: '影响范围: ',
-        message: '描述代码影响范围'
+        message: '影响范围: '
       }
     }
   },
